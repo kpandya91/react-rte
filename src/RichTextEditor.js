@@ -22,6 +22,12 @@ import styles from './RichTextEditor.css';
 
 import type {ContentBlock} from 'draft-js';
 
+import createImagePlugin, { imageCreator, imageStyles } from 'draft-js-image-plugin';
+
+const imagePlugin = createImagePlugin();
+
+const plugins = [imagePlugin];
+
 const MAX_LIST_DEPTH = 2;
 
 // Custom overrides for "code" style.
@@ -83,6 +89,7 @@ export default class RichTextEditor extends Component {
             placeholder={placeholder}
             ref="editor"
             spellCheck={true}
+            plugins={plugins}
           />
         </div>
         <EditorToolbar

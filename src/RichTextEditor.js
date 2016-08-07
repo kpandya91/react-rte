@@ -69,13 +69,6 @@ export default class RichTextEditor extends Component {
     }, editorClassName);
     return (
       <div className={cx(styles.root, className)}>
-        <EditorToolbar
-          className={toolbarClassName}
-          keyEmitter={this._keyEmitter}
-          editorState={editorState}
-          onChange={this._onChange}
-          focusEditor={this._focus}
-        />
         <div className={combinedEditorClassName}>
           <Editor
             {...otherProps}
@@ -92,6 +85,13 @@ export default class RichTextEditor extends Component {
             spellCheck={true}
           />
         </div>
+        <EditorToolbar
+          className={toolbarClassName}
+          keyEmitter={this._keyEmitter}
+          editorState={editorState}
+          onChange={this._onChange}
+          focusEditor={this._focus}
+        />
       </div>
     );
   }

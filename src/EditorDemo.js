@@ -83,16 +83,19 @@ export default class EditorDemo extends Component {
   }
 
   _logState() {
-    let editorState = this.state.value.getEditorState();
-    let contentState = window.contentState = editorState.getCurrentContent().toJS();
-    console.log(contentState);
+    console.log(
+      this.state.value.getEditorState().getCurrentContent().toJS()
+    );
   }
 
   _logStateRaw() {
-    let editorState = this.state.value.getEditorState();
-    let contentState = editorState.getCurrentContent();
-    let rawContentState = window.rawContentState = convertToRaw(contentState);
-    console.log(JSON.stringify(rawContentState));
+    console.log(
+      JSON.stringify(
+        convertToRaw(
+          this.state.value.getEditorState().getCurrentContent()
+        )
+      )
+    );
   }
 
   _onChange(value: EditorValue) {

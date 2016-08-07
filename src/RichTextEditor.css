@@ -8,10 +8,11 @@
 }
 
 .editor {
-  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px;
   cursor: text;
   font-size: 16px;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .editor :global(.public-DraftEditorPlaceholder-root),
@@ -29,7 +30,7 @@
 }
 
 .editor .paragraph {
-  margin: 14px 0;
+  /*margin: 14px 0;*/
 }
 
 /* Consecutive code blocks are nested inside a single parent <pre> (like <li>
@@ -57,8 +58,8 @@
   color: #666;
   font-family: 'Hoefler Text', 'Georgia', serif;
   font-style: italic;
-  margin: 16px 0;
-  padding: 10px 20px;
+  margin: 0;
+  padding: 5px 10px;
 }
 
 /* There shouldn't be margin outside the first/last blocks */
